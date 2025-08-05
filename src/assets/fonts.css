@@ -1,0 +1,173 @@
+/* 字体配置文件 */
+
+/* 导入Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+
+/* 字体预加载 */
+@font-face {
+  font-family: 'PingFang HK';
+  src: local('PingFang HK');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PingFang SC';
+  src: local('PingFang SC');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PingFang TC';
+  src: local('PingFang TC');
+  font-display: swap;
+}
+
+/* 字体变量定义 */
+:root {
+  /* 中文字体族 */
+  --font-family-cn-pingfang: 'PingFang HK', 'PingFang SC', 'PingFang TC';
+  --font-family-cn-system: 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑';
+  --font-family-cn-google: 'Noto Sans SC';
+  --font-family-cn: var(--font-family-cn-pingfang), var(--font-family-cn-system), var(--font-family-cn-google), sans-serif;
+  
+  /* 英文字体族 */
+  --font-family-en-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  --font-family-en-google: 'Inter';
+  --font-family-en: var(--font-family-en-google), var(--font-family-en-system), sans-serif;
+  
+  /* 数字字体族 */
+  --font-family-number-system: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New';
+  --font-family-number: var(--font-family-number-system), monospace;
+  
+  /* 默认字体组合 */
+  --font-family: var(--font-family-cn), var(--font-family-en);
+  
+  /* 字体大小 */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  
+  /* 行高 */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* 字间距 */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+}
+
+/* 字体工具类 */
+.font-cn {
+  font-family: var(--font-family-cn);
+}
+
+.font-en {
+  font-family: var(--font-family-en);
+}
+
+.font-number {
+  font-family: var(--font-family-number);
+}
+
+.font-pingfang {
+  font-family: var(--font-family-cn-pingfang);
+}
+
+.font-noto {
+  font-family: var(--font-family-cn-google);
+}
+
+/* 字体大小工具类 */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+
+/* 字体粗细工具类 */
+.font-thin { font-weight: 100; }
+.font-extralight { font-weight: 200; }
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+
+/* 行高工具类 */
+.leading-tight { line-height: var(--line-height-tight); }
+.leading-normal { line-height: var(--line-height-normal); }
+.leading-relaxed { line-height: var(--line-height-relaxed); }
+
+/* 字间距工具类 */
+.tracking-tight { letter-spacing: var(--letter-spacing-tight); }
+.tracking-normal { letter-spacing: var(--letter-spacing-normal); }
+.tracking-wide { letter-spacing: var(--letter-spacing-wide); }
+
+/* 文本对齐 */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* 文本装饰 */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* 文本转换 */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+/* 字体平滑 */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 响应式字体 */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 0.875rem;   /* 14px on mobile */
+    --font-size-lg: 1rem;         /* 16px on mobile */
+    --font-size-xl: 1.125rem;     /* 18px on mobile */
+  }
+}
+
+/* 深色模式字体优化 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 深色模式下可以调整字体渲染 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* 高对比度模式 */
+@media (prefers-contrast: high) {
+  :root {
+    /* 高对比度模式下的字体优化 */
+    font-weight: 500;
+  }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    /* 减少动画时保持字体清晰 */
+    font-synthesis: none;
+  }
+} 

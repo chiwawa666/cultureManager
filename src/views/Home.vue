@@ -52,6 +52,10 @@
         <van-icon name="medal-o" size="24" color="#9C27B0" />
         <span>等级体系</span>
       </div>
+      <div class="nav-item" @click="goToFontDemo">
+        <van-icon name="font-o" size="24" color="#E91E63" />
+        <span>字体演示</span>
+      </div>
     </div>
 
     <!-- 通知提醒 -->
@@ -137,6 +141,10 @@ const goToRules = () => {
 
 const goToLevels = () => {
   router.push("/level-system");
+};
+
+const goToFontDemo = () => {
+  router.push("/font-demo");
 };
 </script>
 
@@ -225,7 +233,7 @@ const goToLevels = () => {
 
 .nav-icons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-bottom: 20px;
 }
